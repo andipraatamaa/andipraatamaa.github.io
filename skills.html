@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Andi Pratama</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            scroll-behavior: smooth;
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar {
+            background-color: rgba(51, 51, 51, 0.9);
+            padding: 1rem;
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            color: white;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+            font-size: 1.1rem;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+            color: white;
+            border-radius: 5px;
+        }
+        .sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .hero-section {
+            background: linear-gradient(to bottom right, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 150px 0;
+        }
+        .hero-section h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        .hero-section p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+        .hero-section .btn {
+            padding: 15px 30px;
+            font-size: 1.25rem;
+        }
+        .section {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .section h1 {
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+        .card {
+            margin-bottom: 30px;
+            border: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .card h5 {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+        .card p {
+            font-size: 1rem;
+            margin: 0 20px 20px;
+            text-align: justify;
+        }
+        .contact-section {
+            background-color: #000;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .contact-section h1 {
+            margin-bottom: 30px;
+        }
+        .contact-info {
+            margin-bottom: 30px;
+        }
+        .contact-info i {
+            margin-right: 10px;
+        }
+        .social-icons img {
+            width: 50px;
+            height: 50px;
+            margin: 0 10px;
+            transition: transform 0.3s;
+        }
+        .social-icons a:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar Start -->
+    <nav class="navbar sticky">
+        <div class="container">
+            <a class="navbar-brand" href="#">Andi Pratama</a>
+            <div>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="skills.html">Skills</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Sticky Navigation Bar End -->
+
+    <!-- Hero Section Start -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h1>Welcome to My Portfolio</h1>
+            <p>I'm Andi Pratama, a data analyst and data scientist.</p>
+            <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Skills Section Start -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h1>Skills</h1>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/skills/python.png" alt="Python">
+                        <div class="card-body">
+                            <h5 class="card-title">Python and R</h5>
+                            <p class="card-text">Proficient in Python and R for data analysis, data cleaning, data manipulation, data wrangling, data transformation, exploratory data analysis (EDA), feature selection, data encoding, machine learning, deep learning, and more.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/skills/tablea.png" alt="Tableau">
+                        <div class="card-body">
+                            <h5 class="card-title">Visualization Tools</h5>
+                            <p class="card-text">Skilled in using Tableau, PowerBI and Looker Studio for data preparation, data analysis, set, group, parameter, chart, filter, mapping, level of details(LOD), dashboard, for creating interactive and insightful data visualizations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/skills/bigq.png" alt="SQL">
+                        <div class="card-body">
+                            <h5 class="card-title">Query Languange (SQL)</h5>
+                            <p class="card-text">Experienced in SQL (BigQuery, PostgresSQL, MySQL) for data querying, manipulation, and management.</p>
+                            <p>Aggregation, Group, Join, Having, Index, View , Where clauses, Subqueries, CTE,and Window Function</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/skills/spreads.png" alt="Sphreadshet">
+                        <div class="card-body">
+                            <h5 class="card-title">Sphreadshet and Excel</h5>
+                            <p class="card-text">Experienced in Excel Spreadsheet for organizing, analyzing, and visualizing data, using PivotTables and PivotCharts, applying complex functions and formulas, and creating detailed data reports and graphical representations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/skills/softskills.png" alt="SoftSkills">
+                        <div class="card-body">
+                            <h5 class="card-title">Soft Skills</h5>
+                            <p class="card-text">Time Management,Negotiation, Team Work, Problem Solving, Business Knowledge, Intellectual Curiosity</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills Section End -->
+
+    <!-- Certifications Section Start -->
+    <section id="certifications" class="section">
+        <div class="container">
+            <h1>Certifications</h1>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/skills/revou.png" alt="Certification 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Certificate of Achievements Full Stack Data Analytics RevoU</h5>
+                            <a href="https://drive.google.com/file/d/1Bwnagll-YMO0mrxslrRQLSOSTQSQuqPG/view?usp=drive_link" class="btn btn-primary" target="_blank">View Certification</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/skills/tibco.png" alt="Certification 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Professional Certification of Achievements Data Science and Business Analytics TIBCO</h5>
+                            <a href="https://drive.google.com/file/d/1v8saWPyrhZ_9tRIQJy9CVXs49D7m-6hk/view?usp=drive_link" class="btn btn-primary" target="_blank">View Certification</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/skills/sas.png" alt="Certification 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Professional Certification of Achievements Data Science and Business Analytics SAS</h5>
+                            <a href="https://drive.google.com/file/d/1V6ei1quHWRASL1Gj0acSWeCkyXbJ7Gm9/view?usp=drive_link" class="btn btn-primary" target="_blank">View Certification</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Certifications Section End -->
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h1>Contact Me</h1>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> andi_tama@outlook.com</p>
+                <p><i class="fas fa-phone"></i> (+62)82169648798</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/andi--pratama/"><img src="icons/1.png" alt="LinkedIn"></a>
+                <a href="https://github.com/andipraatamaa/"><img src="icons/git.png" alt="GitHub"></a>
+                <a href="mailto:andi_tama@outlook.com"><img src="icons/email.png" alt="Email"></a>
+                <a href="http://WA.me/6282169648798"><img src="icons/wa.png" alt="Whatsapp"></a>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section End -->
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

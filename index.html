@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andi Pratama - Portfolio</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            scroll-behavior: smooth;
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar {
+            background-color: rgba(51, 51, 51, 0.9);
+            padding: 1rem;
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            color: white;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+            font-size: 1.1rem;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+            color: white;
+            border-radius: 5px;
+        }
+        .sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .hero-section {
+            background: linear-gradient(to bottom right, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 150px 0;
+        }
+        .hero-section h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        .hero-section p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+        .hero-section .btn {
+            padding: 15px 30px;
+            font-size: 1.25rem;
+        }
+        .section {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .section h1 {
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+        .card {
+            margin-bottom: 30px;
+            border: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .card h5 {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+        .card p {
+            font-size: 1rem;
+            margin: 0 20px 20px;
+            text-align: justify;
+        }
+        .about-card {
+            background-color: white;
+            color: black;
+            transition: box-shadow 0.3s, color 0.3s;
+            padding: 20px;
+            text-align: center;
+        }
+        .about-card img {
+            max-width: 200px;
+            margin: 20px auto;
+        }
+        .about-card h5 {
+            margin-bottom: 20px;
+        }
+        .about-card p {
+            text-align: center;
+        }
+        .about-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            color: #007bff;
+        }
+        .contact-section {
+            background-color: #000;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .contact-section h1 {
+            margin-bottom: 30px;
+        }
+        .contact-info {
+            margin-bottom: 30px;
+        }
+        .contact-info i {
+            margin-right: 10px;
+        }
+        .social-icons img {
+            width: 50px;
+            height: 50px;
+            margin: 0 10px;
+            transition: transform 0.3s;
+        }
+        .social-icons a:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar Start -->
+    <nav class="navbar sticky">
+        <div class="container">
+            <a class="navbar-brand" href="#">Andi Pratama</a>
+            <div>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="skills.html">Skills</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Sticky Navigation Bar End -->
+
+    <!-- Hero Section Start -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h1>Welcome to My Portfolio</h1>
+            <p>I'm Andi Pratama, a data analyst and data scientist.</p>
+            <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- About Section Start -->
+    <section id="about" class="section">
+        <div class="container">
+            <h1>About Me</h1>
+            <a href="about.html">
+                <div class="card about-card">
+                    <img src="images/about/1.JPG" alt="Profile Picture">
+                    <h5>Profile</h5>
+                    <p class="card-text">I am a detail-oriented data professional with a Master’s degree in Data Science and Business Analytics and 2 year experience in data science and analysis. My expertise includes hands-on experience in data collection, data pre-processing,data integration, clustering, and visualization. During my internship at RevoU x T elkom, I conducted customer segmentation using advanced clustering methods, providing actionable insights for targeted marketing, and developed interactive dashboards and recommendation systems.</p> 
+                    <p class="card-text">In a project analyzing Tokopedia’s smartphone sales data, I applied market segmentation techniques and built predictive models for pricing strategies, enabling more effective targeting and pricing decisions.</p>
+                    <p class="card-text">These experiences, alongside technical proficiency in Python, R, SQL, and Tableau, demonstrate my commitment to leveraging data to drive impactful business solutions.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Projects Section Start -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h1>Projects</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card" data-toggle="modal" data-target="#project1Modal">
+                        <img src="images/projects/1.png" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Uber Customer Segmentation Analysis and Fare Prediction</h5>
+                            <p class="card-text">Explore and integrate ride-sharing solutions to improve operational efficiency, apply customer segmentation analysis to understand diverse user needs and
+                                preferences, and develop and implement data-driven pricing models that adapt to various factors influencing fare amounts</p>
+                            <a href="project1.html" class="btn btn-primary btn-details">More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" data-toggle="modal" data-target="#project2Modal">
+                        <img src="images/projects/2.png" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Tokopedia Smartphone Sales Market Analysis and Price Prediction</h5>
+                            <p class="card-text">Develop a machine learning model by integrating Random Forest,LightGBM
+                                and K-Means Clustering to provide insights for decision making by 
+                                implementing Machine Learning</p>
+                            <a href="project2.html" class="btn btn-primary btn-details">More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" data-toggle="modal" data-target="#project3Modal">
+                        <img src="images/projects/3.png" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">SaaS Company Pricing, Sales and Marketing Strategy Analysis</h5>
+                            <p class="card-text">Evaluate sales funnel, optimize marketing channel and implement optimal pricing strategies for each subscription type and leverage price elasticity of demand (PED)  </p>
+                            <a href="project3.html" class="btn btn-primary btn-details">More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="projects.html" class="btn btn-secondary mt-4">View All Projects</a>
+        </div>
+    </section>
+    <!-- Projects Section End -->
+
+    <!-- Skills Section Start -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h1>Skills</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="images/skills/python.png" alt="Python">
+                            <h5 class="card-title">Statistical Programming Language</h5>
+                            <p class="card-text">With expertise in Python, I excel in data cleaning, manipulation, and wrangling, transforming raw data into valuable insights. I conduct exploratory data analysis (EDA) to uncover trends and patterns, and I utilize feature selection and data encoding techniques for robust machine learning models. My experience extends to deep learning, where I apply neural networks to solve complex problems and drive data-driven decisions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="images/skills/tablea.png" alt="Tableau">
+                            <h5 class="card-title">Data Visualization Tools</h5>
+                            <p class="card-text">I possess strong skills in using visualization tools like Tableau and Power BI to transform complex data into interactive and insightful visualizations. I excel in data preparation and analysis, creating sets, groups, parameters, and filters to enable dynamic data exploration. My expertise in designing interactive dashboards helps communicate key metrics effectively, facilitating data-driven decision-making.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="images/skills/bigq.png" alt="SQL">
+                            <h5 class="card-title">Query Language (SQL)</h5>
+                            <p class="card-text">I am highly skilled in SQL, proficient in querying, updating, and managing relational databases. My capabilities include data aggregation, grouping, joining, and indexing, which allow me to perform comprehensive data analysis. I am adept at writing complex queries using subqueries and common table expressions (CTEs), as well as utilizing window functions to perform advanced calculations across data sets.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="skills.html" class="btn btn-secondary mt-4">View All Skills</a>
+        </div>
+    </section>
+    <!-- Skills Section End -->
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h1>Contact Me</h1>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> andi_tama@outlook.com</p>
+                <p><i class="fas fa-phone"></i> (+62)82169648798</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/andi--pratama/"><img src="icons/1.png" alt="LinkedIn"></a>
+                <a href="https://github.com/andipraatamaa/"><img src="icons/git.png" alt="GitHub"></a>
+                <a href="mailto:andi_tama@outlook.com"><img src="icons/email.png" alt="Email"></a>
+                <a href="http://WA.me/6282169648798"><img src="icons/wa.png" alt="Whatsapp"></a>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section End -->
+
+    <!-- Modals for Project Details -->
+    <!-- Project 1 Modal -->
+    <div class="modal fade" id="project1Modal" tabindex="-1" role="dialog" aria-labelledby="project1ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="project1ModalLabel">Project 1</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/projects/1.png" class="img-fluid mb-3" alt="Project 1">
+                    <h5>Background:</h5>
+                    <p>Uber, a global leader in the ride-sharing industry, operates in a complex and rapidly evolving transportation marketplace. Customer retention, pricing strategy, and cost management are perennial challenges amid fluctuating demand patterns and variable operational costs.</p>
+                    <h5>Objective:</h5>
+                    <p>Explore and integrate ride-sharing solutions to improve operational efficiency and reduce costs</p>
+                    <p>Apply customer segmentation analysis to understand diverse user needs and preferences, facilitating personalized services and targeted marketing efforts.</p>
+                    <p>Develop and implement data-driven pricing models that adapt to various factors influencing fare amounts</p>
+                    <h5>Method:</h5>
+                    <p>Machine Learning,K-means Clustering, ANOVA Testing, PCA, Random Forest, XGBoost and Hyperparameter Tuning</p>
+                    <h5>Result:</h5>
+                    <p>K-Means Silhouette score 0.6 and Highest Score on XGBOOST model R² rate of 77%</p>
+                    <p>Customer Segments reveal by riding pattern like fare, distance, week, hour and part of day.</p>
+                    <p>The majority of trips have a pattern tied to time and location.Higher demands during mid-day to night and lower demands in early morning hours.</p>
+                    <p>There is a correlation between fare prices, demand elasticity, and customer churn. Price-sensitive customers may be more prone to churn if fares frequently surge.</p>
+                    <p>Churn can be influenced by customer experience, fare discrepancies, and the availability of alternatives.</p>
+                    <a href="https://drive.google.com/file/d/1jdqLLt7qGcxzBTWVBC7LDymMw-kElXu-/view?usp=drive_link" class="btn btn-primary">Blog Post</a>
+                    <a href="#" class="btn btn-secondary">Source Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 Modal -->
+    <div class="modal fade" id="project2Modal" tabindex="-1" role="dialog" aria-labelledby="project2ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="project2ModalLabel">Project 2</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/projects/2.png" class="img-fluid mb-3" alt="Project 2">
+                    <h5>Background:</h5>
+                    <p>Mobile phone industry demands precise sales forecasts due to its fast-paced nature and evolving consumer preferences. The core problem is to make reliable sales forecasts in the mobile phone industry.</p>
+                    <h5>Objective:</h5>
+                    <p>Observe top feature influence purchases</p>
+                    <p>Develop a machine learning model by integrating Random Forest,LightGBM and K-Means Clustering to provide insights for decision making by implementing Machine Learning.</p>
+                    <p>Evaluate and compares Machine Learning algorithm Random Forest and LightGBM. </p>
+                    <h5>Method:</h5>
+                    <p> Machine Learning,K-means Clustering, ANOVA Testing, Chi-square Testing, PCA, Random Forest and LightGBM and Hyperparameter Tuning. </p>
+                    <h5>Result:</h5>
+                    <p>K-Means Silhouette score 0.77 and Highest Score on Random Forest with hyperparameter tuning model R² rate of 60%</p>
+                    <p>CTop 3 Feature affect on sales are Product Type (product_type), Daily View (daily_view), Price (price).</p>
+                    <p>Medium range dominance among the cluster with 49.2%, followed with Entry level on 44.1 and lastly High-end with 6.7%.</p>
+                    <p>The Tuned Random Forest Model proved to be the best-performing model for this regression task. It achieved the lowest MSE, the highest R2, and a competitive MAE. </p>
+                    <a href="https://drive.google.com/file/d/1B3WpEhrTH0SwLYm3wQd80wmlsb-82fS_/view?usp=drive_link" class="btn btn-primary">Blog Post</a>
+                    <a href="#" class="btn btn-secondary">Source Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 Modal -->
+    <div class="modal fade" id="project3Modal" tabindex="-1" role="dialog" aria-labelledby="project3ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="project3ModalLabel">Project 3</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/projects/3.png" class="img-fluid mb-3" alt="Project 3">
+                    <h5>Background:</h5>
+                    <p>PeopleU is a B2B Software as a Service (SaaS) company that offers a human resource management application. PeopleU has established cooperation with several companies with various scales and industry. PeopleU provides a comprehensive HR management solution with many features. 
+                        Currently, the focus of PeopleU is to increase its customer with several initiatives such as evaluating the marketings and acquisition process, also considering offering price packages. Experts, as the person in charge, tries to guide the DA team to provide the proper evaluation and advice regarding how data can be used to provide analysis to support those initiatives. 
+                    </p>
+                    <h5>Objective:</h5>
+                    <p>Analyze Funnel to improve conversion rate and increase customer acqusition up to 40%.</p>
+                    <p>Optimize marketing channel to find market strategy and reduce marketing cost 20%.</p>
+                    <p>Investigate and implement optimal pricing strategies for each subscription type and leverage price elasticity of demand (PED) analysis to set competitive and attractive pricing.</p>
+                    <h5>Method:</h5>
+                    <p> ANOVA Testing,Funnel Analysis, Segmentation, Market Analysis,Price Elasticity of Demand(PED). </p>
+                    <h5>Result:</h5>
+                    <p>The overall conversion rate from Leads Registered to Deal Won is 26.52%.</p>
+                    <p>Price and not interested are the reasons our potential customers choose not to use our products.</p>
+                    <p>We can segments our customer based on indutry(6 Segments) and based on company size(4 Segments).</p>
+                    <p>CPC the most cost-effective channel in terms of cost per lead and cost per acquisition.Shifting more budget towards CPC might lead to acquiring more leads and contracts at a lower cost. </p>                   
+                    <p>Finance, Retail and Hospitality is highest ROI</p>
+                    <p>Reduce 10% of price each subscription type potentially growth customer acqusition up to 170% each segment and increase revenue up to 180% in next year(2023) </p>
+                    <a href="https://drive.google.com/file/d/1Y9zWJsF_f21yaebCraXC2BEoP-jXBP3j/view?usp=sharing" class="btn btn-primary">Blog Post</a>
+                    <a href="#" class="btn btn-secondary">Source Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Modals -->
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    document.querySelectorAll('.navbar a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = this.getAttribute('href');
+        });
+    });
+</script>
+</body>
+</html>

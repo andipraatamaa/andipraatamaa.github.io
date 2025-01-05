@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Andi Pratama</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            scroll-behavior: smooth;
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar {
+            background-color: rgba(51, 51, 51, 0.9);
+            padding: 1rem;
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            color: white;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+            font-size: 1.1rem;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+            color: white;
+            border-radius: 5px;
+        }
+        .sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .hero-section {
+            background: linear-gradient(to bottom right, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 150px 0;
+        }
+        .hero-section h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        .hero-section p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+        .hero-section .btn {
+            padding: 15px 30px;
+            font-size: 1.25rem;
+        }
+        .section {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .section h1 {
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+        .projects-header {
+            background-image: url('images/projects-header.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+        .projects-header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .projects-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .projects-section h1 {
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+        .search-bar {
+            margin-bottom: 30px;
+        }
+        .search-bar input {
+            width: 50%;
+            padding: 10px;
+            font-size: 1rem;
+        }
+        .card {
+            margin-bottom: 30px;
+            border: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px 10px 0 0;
+        }
+        .card-title {
+            font-size: 1.5rem;
+            margin-top: 15px;
+        }
+        .card-subtitle {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .card-text {
+            font-size: 1rem;
+            color: #666;
+        }
+        .btn-primary, .btn-secondary {
+            margin: 5px;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            border-radius: 10px 10px 0 0;
+        }
+        .card:hover .overlay {
+            opacity: 1;
+        }
+        .overlay-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .contact-section {
+            background-color: #000;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .contact-section h1 {
+            margin-bottom: 30px;
+        }
+        .contact-info {
+            margin-bottom: 30px;
+        }
+        .contact-info i {
+            margin-right: 10px;
+        }
+        .social-icons img {
+            width: 50px;
+            height: 50px;
+            margin: 0 10px;
+        }
+        .social-icons a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+   <!-- Sticky Navigation Bar Start -->
+   <nav class="navbar sticky">
+    <div class="container">
+        <a class="navbar-brand" href="#">Andi Pratama</a>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="skills.html">Skills</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</nav>
+<!-- Sticky Navigation Bar End -->
+
+<!-- Hero Section Start -->
+<section id="home" class="hero-section">
+    <div class="container">
+        <h1>My Project </h1>
+        <p>Let's explores my project.</p>
+    </div>
+</section>
+<!-- Hero Section End -->
+
+    <!-- Projects Section Start -->
+    <section class="projects-section">
+        <div class="container">
+            <h1>Projects</h1>
+            <div class="search-bar">
+                <input type="text" id="searchInput" onkeyup="searchProjects()" placeholder="Search for projects..">
+            </div>
+            <div class="row" id="projectsGrid">
+                <!-- Project 1 -->
+                <div class="col-lg-4 col-md-6 project-card" data-toggle="modal" data-target="#project1Modal">
+                    <div class="card">
+                        <img src="images/projects/1.png" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Uber Customer Segmentation Analysis and Fare Prediction</h5>
+                            <p class="card-text">Explore and integrate ride-sharing solutions to improve operational efficiency, apply customer segmentation analysis to understand diverse user needs and
+                                preferences, and develop and implement data-driven pricing models that adapt to various factors influencing fare amounts</p>
+                        </div>
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <a href="https://drive.google.com/file/d/1jdqLLt7qGcxzBTWVBC7LDymMw-kElXu-/view?usp=drive_link" class="btn btn-primary">Pitch Deck</a>
+                                <a href="https://github.com/andipraatamaa/portfolio-sc/blob/main/source%20code/1%20uber%20code.ipynb" class="btn btn-secondary">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 1 Modal -->
+                <div class="modal fade" id="project1Modal" tabindex="-1" role="dialog" aria-labelledby="project1ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="project1ModalLabel">Uber Customer Segmentation Analysis and Fare Prediction</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/projects/1.png" class="img-fluid mb-3" alt="Project 1">
+                                <h5>Background:</h5>
+                                <p>Uber, a global leader in the ride-sharing industry, operates in a complex and rapidly evolving transportation marketplace. Customer retention, pricing strategy, and cost management are perennial challenges amid fluctuating demand patterns and variable operational costs.</p>
+                                <h5>Objective:</h5>
+                                <p>Explore and integrate ride-sharing solutions to improve operational efficiency and reduce costs</p>
+                                <p>Apply customer segmentation analysis to understand diverse user needs and preferences, facilitating personalized services and targeted marketing efforts.</p>
+                                <p>Develop and implement data-driven pricing models that adapt to various factors influencing fare amounts</p>
+                                <h5>Method:</h5>
+                                <p>Machine Learning,K-means Clustering, ANOVA Testing, PCA, Random Forest, XGBoost and Hyperparameter Tuning</p>
+                                <h5>Result:</h5>
+                                <p>K-Means Silhouette score 0.6 and Highest Score on XGBOOST model R² rate of 77%</p>
+                                <p>Customer Segments reveal by riding pattern like fare, distance, week, hour and part of day.</p>
+                                <p>The majority of trips have a pattern tied to time and location.Higher demands during mid-day to night and lower demands in early morning hours.</p>
+                                <p>There is a correlation between fare prices, demand elasticity, and customer churn. Price-sensitive customers may be more prone to churn if fares frequently surge.</p>
+                                <p>Churn can be influenced by customer experience, fare discrepancies, and the availability of alternatives.</p>
+                                <a href="https://drive.google.com/file/d/1jdqLLt7qGcxzBTWVBC7LDymMw-kElXu-/view?usp=drive_link" class="btn btn-primary">Pitch Deck</a>
+                                <a href="https://github.com/andipraatamaa/portfolio-sc/blob/main/source%20code/1%20uber%20code.ipynb" class="btn btn-secondary">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-lg-4 col-md-6 project-card" data-toggle="modal" data-target="#project2Modal">
+                    <div class="card">
+                        <img src="images/projects/2.png" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Tokopedia Smartphone Sales Market Analysis and Price Prediction</h5>
+                            <p class="card-text">Develop a machine learning model by integrating Random Forest,LightGBM
+                                and K-Means Clustering to provide insights for decision making by 
+                                implementing Machine Learning</p>
+                        </div>
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <a href="https://drive.google.com/file/d/1B3WpEhrTH0SwLYm3wQd80wmlsb-82fS_/view?usp=drive_link" class="btn btn-primary">Pitch Deck</a>
+                                <a href="https://github.com/andipraatamaa/portfolio-sc/blob/main/source%20code/2%20tokopedia%20smartphone%20sales.csv" class="btn btn-secondary">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 Modal -->
+                <div class="modal fade" id="project2Modal" tabindex="-1" role="dialog" aria-labelledby="project2ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="project2ModalLabel">Tokopedia Smartphone Sales Market Analysis and Price Prediction</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/projects/2.png" class="img-fluid mb-3" alt="Project 2">
+                                <h5>Background:</h5>
+                                <p>Mobile phone industry demands precise sales forecasts due to its fast-paced nature and evolving consumer preferences. The core problem is to make reliable sales forecasts in the mobile phone industry.</p>
+                                <h5>Objective:</h5>
+                                <p>Observe top feature influence purchases</p>
+                                <p>Develop a machine learning model by integrating Random Forest,LightGBM and K-Means Clustering to provide insights for decision making by implementing Machine Learning.</p>
+                                <p>Evaluate and compares Machine Learning algorithm Random Forest and LightGBM. </p>
+                                <h5>Method:</h5>
+                                <p> Machine Learning,K-means Clustering, ANOVA Testing, Chi-square Testing, PCA, Random Forest and LightGBM and Hyperparameter Tuning. </p>
+                                <h5>Result:</h5>
+                                <p>K-Means Silhouette score 0.77 and Highest Score on Random Forest with hyperparameter tuning model R² rate of 60%</p>
+                                <p>Top 3 Feature affect on sales are Product Type (product_type), Daily View (daily_view), Price (price).</p>
+                                <p>Medium range dominance among the cluster with 49.2%, followed with Entry level on 44.1 and lastly High-end with 6.7%.</p>
+                                <p>The Tuned Random Forest Model proved to be the best-performing model for this regression task. It achieved the lowest MSE, the highest R2, and a competitive MAE. </p>
+                                <a href="https://drive.google.com/file/d/1B3WpEhrTH0SwLYm3wQd80wmlsb-82fS_/view?usp=drive_link" class="btn btn-primary">Pitch Deck</a>
+                                <a href="https://github.com/andipraatamaa/portfolio-sc/blob/main/source%20code/2%20tokopedia%20smartphone%20sales.csv" class="btn btn-secondary">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="col-lg-4 col-md-6 project-card" data-toggle="modal" data-target="#project3Modal">
+                    <div class="card">
+                        <img src="images/projects/3.png" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">SaaS Company Pricing, Sales and Marketing Strategy Analysis</h5>
+                            <p class="card-text">Evaluate sales funnel, optimize marketing channel and implement optimal pricing strategies for each subscription type and leverage price elasticity of demand (PED)  </p>
+                        </div>
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <a href="https://drive.google.com/file/d/1Y9zWJsF_f21yaebCraXC2BEoP-jXBP3j/view?usp=sharing" class="btn btn-primary">Pitch Deck</a>
+                                <a href="https://github.com/andipraatamaa/portfolio-sc/blob/main/source%20code/3%20SaaS%20.ipynb" class="btn btn-secondary">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 Modal -->
+                <div class="modal fade" id="project3Modal" tabindex="-1" role="dialog" aria-labelledby="project3ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="project3ModalLabel">SaaS Company Pricing, Sales and Marketing Strategy Analysis</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/projects/3.png" class="img-fluid mb-3" alt="Project 3">
+                                <h5>Background:</h5>
+                                <p>PeopleU is a B2B Software as a Service (SaaS) company that offers a human resource management application. PeopleU has established cooperation with several companies with various scales and industry. PeopleU provides a comprehensive HR management solution with many features. 
+                                    Currently, the focus of PeopleU is to increase its customer with several initiatives such as evaluating the marketings and acquisition process, also considering offering price packages. Experts, as the person in charge, tries to guide the DA team to provide the proper evaluation and advice regarding how data can be used to provide analysis to support those initiatives. 
+                                </p>
+                                <h5>Objective:</h5>
+                                <p>Analyze Funnel to improve conversion rate and increase customer acqusition up to 40%.</p>
+                                <p>Optimize marketing channel to find market strategy and reduce marketing cost 20%.</p>
+                                <p>Investigate and implement optimal pricing strategies for each subscription type and leverage price elasticity of demand (PED) analysis to set competitive and attractive pricing.</p>
+                                <h5>Method:</h5>
+                                <p> ANOVA Testing,Funnel Analysis, Segmentation, Market Analysis,Price Elasticity of Demand(PED). </p>
+                                <h5>Result:</h5>
+                                <p>The overall conversion rate from Leads Registered to Deal Won is 26.52%.</p>
+                                <p>Price and not interested are the reasons our potential customers choose not to use our products.</p>
+                                <p>We can segments our customer based on indutry(6 Segments) and based on company size(4 Segments).</p>
+                                <p>CPC the most cost-effective channel in terms of cost per lead and cost per acquisition.Shifting more budget towards CPC might lead to acquiring more leads and contracts at a lower cost. </p>                   
+                                <p>Finance, Retail and Hospitality is highest ROI</p>
+                                <p>Reduce 10% of price each subscription type potentially growth customer acqusition up to 170% each segment and increase revenue up to 180% in next year(2023) </p>
+                                <a href="https://drive.google.com/file/d/1Y9zWJsF_f21yaebCraXC2BEoP-jXBP3j/view?usp=sharing" class="btn btn-primary">Pitch Deck</a>
+                                <a href="https://github.com/andipraatamaa/portfolio-sc/blob/main/source%20code/3%20SaaS%20.ipynb" class="btn btn-secondary">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="col-lg-4 col-md-6 project-card" data-toggle="modal" data-target="#project4Modal">
+                    <div class="card">
+                        <img src="images/projects/4.png" class="card-img-top" alt="Project 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Steam Performance Dashboard Analysis</h5>
+                            <p class="card-text">Explores data to get valuable insight to support company growth and create interactive dashboard </p>
+                        </div>
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <a href=https://public.tableau.com/app/profile/andi.pratama5991/viz/Assignment-Advanced/Dashboard1" class="btn btn-secondary">Dashboard</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 4 Modal -->
+                <div class="modal fade" id="project4Modal" tabindex="-1" role="dialog" aria-labelledby="project4ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="project4ModalLabel">Steam Performance Dashboard Analysis</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/projects/4.png" class="img-fluid mb-3" alt="Project 4">
+                                <h5>Background:</h5>
+                                <p>You are a data analyst at one of the most reputable gaming companies Steam, we want to utilize more data insight to support company growth. You will analyze all information in this company using the given data. Mr. Ronaldinho (CEO), requested Mr. Neymar (head of data) to create a company-wide dashboard. Mr. Neymar trusts you to create the dashboard
+                                </p>
+                                <h5>Objective:</h5>
+                                <p>Do exploratory data analysis to get valuable insight to support company growth. </p>
+                                <p>Create interactive dashboard to highlight insight.</p>
+                                <h5>Method:</h5>
+                                <p> Data Preparation, Aggregation, Grouping, Filtering, Mapping , and LOD. </p>
+                                <h5>Result:</h5>
+                                <p>Most games do not offer discounts, and when discounts are offered, they tend to be modest.</p>
+                                <p>An overwhelming majority of users have made purchases, with only a small fraction never making a purchase.</p>
+                                <p>We can segments our customer based on indutry(6 Segments) and based on company size(4 Segments).</p>
+                                <p>There are notable peaks in prices during August and December, which could correspond with seasonal trends and promotions. </p>                   
+                                <p> There's a diversity in the types of games that engage users for longer periods.</p>
+                                <p>Action, RPG, and Adventure games are the most popular categories. </p>
+                                <a href="https://public.tableau.com/app/profile/andi.pratama5991/viz/Assignment-Advanced/Dashboard1" class="btn btn-secondary">Dashboard</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add similar blocks for remaining projects -->
+                <!-- Project 5 -->
+                <div class="col-lg-4 col-md-6 project-card" data-toggle="modal" data-target="#project5Modal">
+                    <div class="card">
+                        <img src="images/projects/5.png" class="card-img-top" alt="Project 5">
+                        <div class="card-body">
+                            <h5 class="card-title">TheLook E-Commerce Cohort and Inventory Analysis</h5>
+                            <p class="card-text">Analysis of the product categories to determine their growth rates over the past year and identify which categories are underperforming. </p>
+                        </div>
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <a href="https://github.com/andipraatamaa/portfolio-sc/blob/main/source%20code/5%20thelook%20ecom.sql" class="btn btn-secondary">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 5 Modal -->
+                <div class="modal fade" id="project5Modal" tabindex="-1" role="dialog" aria-labelledby="project5ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="project5ModalLabel">TheLook E-Commerce Cohort and Inventory Analysis</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/projects/5.png" class="img-fluid mb-3" alt="Project 5">
+                                <h5>Background:</h5>
+                                <p>TheLook e-commerce is focusing on optimization by cutting resources from low-growth categories. To support this initiative, I would conduct an analysis of the product categories to determine their growth rates over the past year and identify which categories are underperforming.
+                                </p>
+                                <h5>Objective:</h5>
+                                <p>Identify product categories with the lowest growth rates. </p>
+                                <p>Determine which resources can be reallocated or cut off based on the performance of these categories.</p>
+                                <p>Understand customer retention and behavior to potentially increase the lifetime value of customers and encourage repeat purchases.</p>
+                                <h5>Method:</h5>
+                                <p>SQL Windows Function,SQL CTE, and Cohort Analysis </p>
+                                <h5>Result:</h5>
+                                <p>Every category listed has experienced a substantial decline in inventory count from the previous month, with growth percentages ranging from approximately -64.27% to -71.31%. </p>
+                                <p>Highest decline in “Blazers & Jackets” at -71.31%.</p>
+                                <p>the "Dresses" category shows the smallest decline at -64.27%.</p>
+                                <p>Both "Accessories" and "Active" categories show similar rates of decline (-67.52% and -67.24%, respectively). </p>                   
+                                <p>The data shows instances of 100% retention rates in the months immediately following the first purchase.</p>
+                                <p>There are users returning to make purchases long after their initial purchase, as seen in the case of a user making another purchase in 2020 and 2022 after their first purchase in 2019.</p>
+                                <a href="https://github.com/andipraatamaa/portfolio-sc/blob/main/source%20code/5%20thelook%20ecom.sql" class="btn btn-secondary">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add similar blocks for remaining projects -->
+                  <!-- Project 6 -->
+                <div class="col-lg-4 col-md-6 project-card" data-toggle="modal" data-target="#project6Modal">
+                    <div class="card">
+                        <img src="images/projects/6.png" class="card-img-top" alt="Project 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Automobile Company RFM,CLV and Chun Rate Analysis</h5>
+                            <p class="card-text">Segments Customer with Recency Frequency Monetary(RFM),calculation of customer lifetime value (CLV) and churn rate analysis </p>
+                        </div>
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <a href="https://drive.google.com/file/d/1FEtndCWD43wPwkIiMwGWaAKK5GBPgaGg/view?usp=drive_link" class="btn btn-primary">Pitch Deck</a>
+                                <a href="https://github.com/andipraatamaa/portfolio-sc/blob/main/source%20code/6%20automobile_rfm_clv_churnrate_analysis.ipynb" class="btn btn-secondary">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 6 Modal -->
+                <div class="modal fade" id="project6Modal" tabindex="-1" role="dialog" aria-labelledby="project6ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="project6ModalLabel">Automobile Company RFM, CLV And Churn Rate Analysiss</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/projects/6.png" class="img-fluid mb-3" alt="Project 6">
+                                <h5>Background:</h5>
+                                <p>The company is a retail business specializing in the sale of automobiles and related services. With a diverse customer base, understanding customer behavior is critical for improving sales strategies and customer retention. Leveraging data analytics, the company aims to enhance its customer relationship management (CRM) efforts by identifying key customer segments, predicting customer lifetime value (CLV), and reducing churn rates.
+                                </p>
+                                <h5>Objective:</h5>
+                                <p>Segment Customers: Use RFM (Recency, Frequency, Monetary) analysis to categorize customers into meaningful segments.</p>
+                                <p>Predict Customer Lifetime Value (CLV): Estimate the future value of customers to prioritize marketing efforts.</p>
+                                <p>Analyze Churn Rate: Identify the churn rate and the factors contributing to customer churn to develop effective retention strategies.</p>
+                                <h5>Method:</h5>
+                                <p>Exploratory Data Analysis(EDA), Recency Frequency and Monetary(RFM) Analysis, Customer lifetime Value(CLV) Analysis, Churn Rate Analysis </p>
+                                <h5>Result:</h5>
+                                <p>Our customer were 5 segments based on RFM.</p>
+                                <p>Champions segment customers purchase frequently, spend the most, and have made recent purchases. They are highly engaged and valuable.</p>
+                                <p>Loyal segment customers are regular buyers with moderate purchase frequency and monetary value. They show potential for long-term loyalty.</p>
+                                <p>Potential segment customers have moderate purchase frequency and monetary value but might need more engagement to increase loyalty.</p>                   
+                                <p>At Risk segment customers have not made purchases recently and have low purchase frequency and monetary value. They are at a high risk of churn.</p>
+                                <p>Others segment is group includes varied characteristics with generally lower engagement and spend.</p>
+                                <p>Approximately 12.36% of customers have churned, with churned customers showing higher recency (time since last purchase), lower frequency, and lower monetary value compared to active customers.</p>
+                                <p>Customers with higher purchase frequency and value have a higher CLV. Prioritizing these customers can lead to better returns on marketing investments.</p>
+                                <a href="https://drive.google.com/file/d/1FEtndCWD43wPwkIiMwGWaAKK5GBPgaGg/view?usp=drive_link" class="btn btn-primary">Pitch Deck</a>
+                                <a href="https://github.com/andipraatamaa/portfolio-sc/blob/main/source%20code/6%20automobile_rfm_clv_churnrate_analysis.ipynb" class="btn btn-secondary">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add similar blocks for remaining projects -->
+                    <!-- Project 7 -->
+                <div class="col-lg-4 col-md-6 project-card" data-toggle="modal" data-target="#project7Modal">
+                    <div class="card">
+                        <img src="images/projects/7.png" class="card-img-top" alt="Project 7">
+                        <div class="card-body">
+                            <h5 class="card-title">MSME E-Commerce Performance Dashbard</h5>
+                            <p class="card-text">Designs interactive dashboard for sales team to monitoring our current performance and make a future decisions</p>
+                        </div>
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <a href=https://drive.google.com/file/d/1e3FaWp4XgZVT9zT5XzIiZKzFkFSzZbqX/view?usp=sharing" class="btn btn-primary">Pitch Deck</a>
+                                <a href="https://public.tableau.com/app/profile/andi.pratama5991/viz/2_17234582271550/PerformanceDashboard" class="btn btn-secondary">Dashboard</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 7 Modal -->
+                <div class="modal fade" id="project7Modal" tabindex="-1" role="dialog" aria-labelledby="project7ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="project7ModalLabel">MSME E-Commerce Performance Dashbard</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/projects/7.png" class="img-fluid mb-3" alt="Project 7">
+                                <h5>Background:</h5>
+                                <p>Expert is trying to monitor the performance of the company. In this case Data Analyst is expected to support this initiative by developing the dashboard. Dashboard should provide comprehensiv overview of the data to support sales team.
+                                </p>
+                                <h5>Objective:</h5>
+                                <p>Do exploratory data analysis to get valuable insight to support company growth. </p>
+                                <p>Create interactive dashboard to support sales team.</p>
+                                <h5>Method:</h5>
+                                <p> Data Preparation, Aggregation, Grouping, Filtering, Mapping , and LOD. </p>
+                                <h5>Result:</h5>
+                                <p>Q4 Sales: Rp. 1.640.606M, which shows a significant increase of 42.2%compared to the previous quarter (Q3).</p>
+                                <p>Q4 GMV: Rp. 2.297.580M, reflecting a 19.7% increase compared to Q3.</p>
+                                <p>Q4 Revenue: Rp. 10.265M, up by 45.0% from the previous quarter. The sharp revenue increase aligns with the sales and GMV growth, indicating effective pricing strategies or increased demand.</p>
+                                <p>Transactions: An average of 6,133 transactions per week, with significant spikes around specific weeks, indicating possible promotions, discounts, or other marketing activities. </p>                   
+                                <p> There's a diversity in the types of games that engage users for longer periods.</p>
+                                <p>"Barang Lainnya" and "Elektronik" are the top revenue-generating categories, followed by "Pertukangan" and "Jasa Event Organizer. " This provides insights into the most  profitable segments of the business. </p>
+                                <a href="https://drive.google.com/file/d/1e3FaWp4XgZVT9zT5XzIiZKzFkFSzZbqX/view?usp=sharing" class="btn btn-primary">Pitch Deck</a>
+                                <a href="https://public.tableau.com/app/profile/andi.pratama5991/viz/2_17234582271550/PerformanceDashboard" class="btn btn-secondary">Dashboard</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add similar blocks for remaining projects -->
+                    <!-- Project 8 -->
+                <div class="col-lg-4 col-md-6 project-card" data-toggle="modal" data-target="#project8Modal">
+                    <div class="card">
+                        <img src="images/projects/8.png" class="card-img-top" alt="Project 8">
+                        <div class="card-body">
+                            <h5 class="card-title">MSME E-Commerce Customer Segmentation</h5>
+                            <p class="card-text">Segmetns our customer with Gaussian Mixture Models(GMMs) for buyer category and grouping seller category.</p>
+                        </div>
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <a href="https://drive.google.com/file/d/1s7b2CIzF-fiWV9FnoWE4ZWfsY_5DjaTt/view?usp=sharing" class="btn btn-primary">Pitch Deck</a>
+                                <a href="https://github.com/andipraatamaa/portfolio-sc/blob/main/source%20code/8%20MSME%20segmentation.ipynb" class="btn btn-secondary">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 8 Modal -->
+                <div class="modal fade" id="project8Modal" tabindex="-1" role="dialog" aria-labelledby="project8ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="project4ModalLabel">MSME E-Commerce Customer Segmentation</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/projects/8.png" class="img-fluid mb-3" alt="Project 8">
+                                <h5>Background:</h5>
+                                <p> The experts believe that they’re missing an opportunity to leverage their
+                                    customers. The expert would like to conduct different approaches in
+                                    different segments using customer segmentation analysis. The expert
+                                    would like to know the characteristics of each segment and utilize their
+                                    behavior to improve business performance.
+                                    On the other hand, the B2B Marketplace also has the obligation to
+                                    support our seller. The expert would also like to understand the
+                                    characteristics of our seller. We will use the insight for a better support
+                                    for our seller.
+                                </p>
+                                <h5>Objective:</h5>
+                                <p>Evaluate our current performance </p>
+                                <p>Segment Buyer and provide recommendation based on pattern or buyer behavior </p>
+                                <p>Segment Seller and provide recommendation based on pattern or seller behavior </p>
+                                <h5>Method:</h5>
+                                <p> Exploratory Data Analysis(EDA),Data Cleansing, Feature Engineering,GMMs, K-Means, Grouping, Segmentations. </p>
+                                <h5>Result:</h5>
+                                <p>4 Segmentations for buyer category and 5 Segmentations for seller category.</p>
+                                <p>Cluster 0: Moderate-value buyers with extremely low satisfaction, Cluster 1: Value-conscious, highly satisfied buyers, Cluster 2: Bulk buyers with moderate satisfaction, Cluster 3: High-value buyers with low satisfaction.</p>
+                                <p>High-Value Sellers (Besar, Swasta): Need to focus on improving customer satisfaction and addressing quality or service issues.
+                                </p> 
+                                <p>High-Volume Sellers (Kecil, Menengah, Mikro): Are performing well in terms of GMV and revenue but could benefit from targeted support to enhance their operations and customer
+                                    experience further.</p>
+                                <a href="https://drive.google.com/file/d/1s7b2CIzF-fiWV9FnoWE4ZWfsY_5DjaTt/view?usp=sharing" class="btn btn-primary">Pitch Deck</a>
+                                <a href="https://github.com/andipraatamaa/portfolio-sc/blob/main/source%20code/8%20MSME%20segmentation.ipynb" class="btn btn-secondary">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add similar blocks for remaining projects -->
+                    <!-- Project 9 -->
+                <div class="col-lg-4 col-md-6 project-card" data-toggle="modal" data-target="#project9Modal">
+                    <div class="card">
+                        <img src="images/projects/9.png" class="card-img-top" alt="Project 9">
+                        <div class="card-body">
+                            <h5 class="card-title">Product Recommendation MSME E-Commerce</h5>
+                            <p class="card-text">Develop product recommendation system using KNN user-based collaborative filtering and KNN item-based collaborative filtering for recommends product by user id and product id. </p>
+                        </div>
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <a href="https://drive.google.com/file/d/1plELYFDpKC1EaF2m6EkMnDt1HcEl2nWf/view?usp=sharing" class="btn btn-primary">Pitch Deck</a>
+                                <a href="https://github.com/andipraatamaa/portfolio-sc/blob/main/source%20code/9%20rec_system.ipynb" class="btn btn-secondary">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 9 Modal -->
+                <div class="modal fade" id="project9Modal" tabindex="-1" role="dialog" aria-labelledby="project9ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="project9ModalLabel">Product Recommendation MSME E-Commerce</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/projects/9.png" class="img-fluid mb-3" alt="Project 9">
+                                <h5>Background:</h5>
+                                <p>As data analysts, we have been entrusted by our stakeholders to develop an advanced product recommendation system that will not only enhance the customer shopping experience but also strategically boost sales and facilitate upselling of our products and services. 
+                                </p>
+                                <h5>Objective:</h5>
+                                <p>Leverage customer and product data along with advanced analytics to develop a personalized product recommendation system. </p>
+                                <p>Utilize the recommendation system to:
+                                    Increase sales
+                                    Improve customer satisfaction
+                                    Foster long-term brand loyalty.</p>
+                                <h5>Method:</h5>
+                                <p>Exploratory Data Analysis(EDA), Collaborative Filtering for item-based & user-based using KNN,Feature Selection. </p>
+                                <h5>Result:</h5>
+                                <p>User-Based Recommendation : "Ucup" are recommended for buying product Ultra Teh Kotak Less Sugar(82.6%), Ultra Milk Full Cream(82.4),  Ultra Milk Strawberry(80.5%), Ultra Milk Cokelat(78.4%) , UT Teh Kotak(78.4%)</p>
+                                <p>Item-Based Recommendation : "Jasa Pekerjaan Perbaikan Line Power Reaktor Synbus Pusri-4" recommended for buying product Pekerjaan Jasa Perbaikan Terminasi RCL (Reaktor Current Limiter), Jasa Pekerjaan Perbaikan Line Power Reaktor Synbus Pusri-4, Pencucian HVAC Area STG periode Maret 2024, Pekerjaan Jasa pemasangan  LBS-311\t, BATTERY N200 PREMIUM.</p>
+                                <a href="https://drive.google.com/file/d/1plELYFDpKC1EaF2m6EkMnDt1HcEl2nWf/view?usp=sharing" class="btn btn-primary">Pitch Deck</a>
+                                <a href="https://github.com/andipraatamaa/portfolio-sc/blob/main/source%20code/9%20rec_system.ipynb" class="btn btn-secondary">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add similar blocks for remaining projects -->
+            </div>
+        </div>
+    </section>
+    <!-- Projects Section End -->
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h1>Contact Me</h1>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> andi_tama@outlook.com</p>
+                <p><i class="fas fa-phone"></i> (+62)82169648798</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/andi--pratama/"><img src="icons/1.png" alt="LinkedIn"></a>
+                <a href="https://github.com/andipraatamaa/"><img src="icons/git.png" alt="GitHub"></a>
+                <a href="mailto:andi_tama@outlook.com"><img src="icons/email.png" alt="Email"></a>
+                <a href="http://WA.me/6282169648798"><img src="icons/wa.png" alt="Whatsapp"></a>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section End -->
+
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function searchProjects() {
+        var input, filter, cards, cardContainer, title, i;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        cardContainer = document.getElementById("projectsGrid");
+        cards = cardContainer.getElementsByClassName("project-card");
+        for (i = 0; i < cards.length; i++) {
+            title = cards[i].querySelector(".card-title");
+            if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+                cards[i].style.display = "";
+            } else {
+                cards[i].style.display = "none";
+            }
+        }
+    }
+</script>
+</body>
+</html>

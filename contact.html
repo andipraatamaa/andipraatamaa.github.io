@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Andi Pratama</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("uYmgVhRNHMT6MlA0z"); // Replace 'YOUR_USER_ID' with your actual EmailJS user ID
+        })();
+    </script>
+    <style>
+        body {
+            scroll-behavior: smooth;
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar {
+            background-color: rgba(51, 51, 51, 0.9);
+            padding: 1rem;
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            color: white;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+            font-size: 1.1rem;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+            color: white;
+            border-radius: 5px;
+        }
+        .sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .hero-section {
+            background: linear-gradient(to bottom right, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 150px 0;
+        }
+        .hero-section h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        .hero-section p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+        .hero-section .btn {
+            padding: 15px 30px;
+            font-size: 1.25rem;
+        }
+        .contact-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .contact-section h1 {
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+        .contact-info {
+            margin-bottom: 30px;
+        }
+        .contact-info p {
+            font-size: 1.2rem;
+        }
+        .contact-info i {
+            margin-right: 10px;
+        }
+        .social-icons img {
+            width: 50px;
+            height: 50px;
+            margin: 0 10px;
+        }
+        .social-icons a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .form-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+        .form-section h1 {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar Start -->
+    <nav class="navbar sticky">
+        <div class="container">
+            <a class="navbar-brand" href="#">Andi Pratama</a>
+            <div>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="skills.html">Skills</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Sticky Navigation Bar End -->
+
+    <!-- Hero Section Start -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h1>Contact Me</h1>
+            <p>I'd love to hear from you!</p>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Contact Information Section Start -->
+    <section class="contact-section">
+        <div class="container">
+            <h1>Contact Information</h1>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> <img src="icons/mail.png" alt="Email" width="24"> andi_tama@outlook.com</p>
+                <p><i class="fas fa-phone"></i> <img src="icons/whatsapp.jpeg" alt="Phone" width="24"> (+62)82169648798</p>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Information Section End -->
+
+    <!-- Send Me a Message Section Start -->
+    <section class="form-section">
+        <div class="container">
+            <h1>Send Me a Message</h1>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="from_name">Your Name</label>
+                    <input type="text" class="form-control" id="from_name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="from_email">Your Email</label>
+                    <input type="email" class="form-control" id="from_email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <!-- Send Me a Message Section End -->
+
+    <!-- Contact Information Section Bottom Start -->
+    <section class="contact-section" style="background-color: #000; color: #fff;">
+        <div class="container">
+            <h1>Contact Me</h1>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> andi_tama@outlook.com</p>
+                <p><i class="fas fa-phone"></i> (+62)82169648798</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/andi--pratama/"><img src="icons/1.png" alt="LinkedIn"></a>
+                <a href="https://github.com/andipraatamaa/"><img src="icons/git.png" alt="GitHub"></a>
+                <a href="mailto:andi_tama@outlook.com"><img src="icons/email.png" alt="Email"></a>
+                <a href="http://WA.me/6282169648798"><img src="icons/wa.png" alt="Whatsapp"></a>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Information Section Bottom End -->
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var from_name = document.getElementById('from_name').value;
+        var from_email = document.getElementById('from_email').value;
+        var message = document.getElementById('message').value;
+
+        var templateParams = {
+            from_name: from_name,
+            from_email: from_email,
+            message: message
+        };
+
+        emailjs.send("service_5pviutp", "template_8l7wgkh", templateParams)
+            .then(function(response) {
+                alert('Your message has been sent successfully!', response.status, response.text);
+            }, function(error) {
+                alert('There was an error sending your message. Please try again later.', error);
+            });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Andi Pratama</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            scroll-behavior: smooth;
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar {
+            background-color: rgba(51, 51, 51, 0.9);
+            padding: 1rem;
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            color: white;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+            font-size: 1.1rem;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+            color: white;
+            border-radius: 5px;
+        }
+        .sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .hero-section {
+            background: linear-gradient(to bottom right, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 150px 0;
+        }
+        .hero-section h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        .hero-section p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+        .hero-section .btn {
+            padding: 15px 30px;
+            font-size: 1.25rem;
+        }
+        .section {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .section h1 {
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+        .card {
+            margin-bottom: 30px;
+            border: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .card h5 {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+        .card p {
+            font-size: 1rem;
+            margin: 0 20px 20px;
+        }
+        .about-card {
+            background-color: white;
+            color: black;
+            transition: box-shadow 0.3s, color 0.3s;
+            padding: 20px;
+            text-align: center;
+        }
+        .about-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .about-card h5 {
+            margin-bottom: 20px;
+        }
+        .about-card p {
+            text-align: center;
+        }
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #333;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        .timeline-item::after {
+            content: ' ';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #333;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-item-left {
+            left: 0;
+        }
+        .timeline-item-right {
+            left: 50%;
+        }
+        .timeline-item-right::after {
+            left: -16px;
+        }
+        .timeline-item-content {
+            padding: 20px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            text-align: center;
+        }
+        .timeline-item-content img {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto 15px;
+        }
+        .contact-section {
+            background-color: #000;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .contact-section h1 {
+            margin-bottom: 30px;
+        }
+        .contact-info {
+            margin-bottom: 30px;
+        }
+        .contact-info i {
+            margin-right: 10px;
+        }
+        .social-icons img {
+            width: 50px;
+            height: 50px;
+            margin: 0 10px;
+            transition: transform 0.3s;
+        }
+        .social-icons a:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar Start -->
+    <nav class="navbar sticky">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Andi Pratama</a>
+            <div>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="skills.html">Skills</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Sticky Navigation Bar End -->
+
+    <!-- About Header Start -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>About Me</h1>
+            <p>Get to know me better</p>
+        </div>
+    </section>
+    <!-- About Header End -->
+
+    <!-- About Section Start -->
+    <section class="section">
+        <div class="container">
+            <h1>About Andi Pratama</h1>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card about-card">
+                        <img src="images/about/1.JPG" alt="Profile Picture">
+                        <div class="card-body">
+                            <h5 class="card-title">Profile</h5>
+                            <p class="card-text">I am a detail-oriented data professional with a Master’s degree in Data Science and Business Analytics and 2 year experience in data science and analysis. My expertise includes hands-on experience in data collection, data pre-processing,data integration, clustering, and visualization. During my internship at RevoU x T elkom, I conducted customer segmentation using advanced clustering methods, providing actionable insights for targeted marketing, and developed interactive dashboards and recommendation systems.</p> 
+                            <p class="card-text">In a project analyzing Tokopedia’s smartphone sales data, I applied market segmentation techniques and built predictive models for pricing strategies, enabling more effective targeting and pricing decisions.</p>
+                            <p class="card-text">These experiences, alongside technical proficiency in Python, R, SQL, and Tableau, demonstrate my commitment to leveraging data to drive impactful business solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Education Section Start -->
+    <section class="section">
+        <div class="container">
+            <h1>Education</h1>
+            <div class="timeline">
+                <!-- Education 1 -->
+                <div class="timeline-item timeline-item-left">
+                    <div class="timeline-item-content">
+                        <img src="images/about/revou.png" alt="Education">
+                        <h3>Full Stack Data Analytics</h3>
+                        <h5>RevoU Bootcamp</h5>
+                        <h5>Score: 97/100</h5>
+                        <h5>Graduation Date: September 2024</h5>
+                        <p>Completed a rigorous 12-week Data Analyst bootcamp, excelling in coursework and hands-on projects. Achieved top 5 best final project
+                            in a cohort of 100+ participants by mastering analytical tools and technologies, including SQL (advanced queries, joins, subqueries),
+                            Python (Pandas, NumPy, Scikit-learn), Excel (pivot tables, complex formulas), and Tableau (advanced dashboards, storytelling).</p>
+                    </div>
+                </div>
+                <!-- Education 2 -->
+                <div class="timeline-item timeline-item-right">
+                    <div class="timeline-item-content">
+                        <img src="images/about/apu.jpeg" alt="Education">
+                        <h3>Master's Degree in Data Science and Business Analytics</h3>
+                        <h5>Asia Pacific University</h5>
+                        <h5>GPA : 3.43/4.00 </h5>
+                        <h5>Graduation Date: March 2024</h5>
+                        <p>Thesis : Developed a predictive model to forecast sales trends using LightGBM, Random Forest, and K- Means Clustering, achieving
+                            an R-squared value of 0.600 and MSE of 1.167.</p>
+                        <p>Related Coursework : Applied Machine Learning, Big Data Analytics and Technologies, Business Intelligence Systems, Data
+                            Management, Multivariate Method for Data Analysis, Advanced Business Analytics and Visualization, Data Analytical Programming,
+                            Cloud, Infrastructure and Services, Natural Language Processing, and Deep Learning</p>
+                    </div>
+                </div>
+                 <!-- Education 3 -->
+                 <div class="timeline-item timeline-item-left">
+                    <div class="timeline-item-content">
+                        <img src="images/about/pelita.png" alt="Education">
+                        <h3>Bachelor's Degree in Computer Science</h3>
+                        <h5>Institution: Institute Business and Technology Pelita Indonesia</h5>
+                        <h5>GPA : 3.59/4.00 </h5>
+                        <h5>Graduation Date: Dec 2022</h5>
+                        <p>Thesis : Designed an innovative Arduino-based fire warning system employing temperature and smoke sensors connected to IoT
+                            (Internet of Things) devices.</p>
+                        <p>Related Coursework : Statistics, Data Structures, Database System, Business Management, Statistics Laboratory, Database Design,
+                            Distributed System and Database, Analysis & Information System</p>
+                    </div>
+                </div>
+             
+            </div>
+        </div>
+    </section>
+    <!-- Education Section End -->
+
+    <!-- Work Experience Section Start -->
+    <section class="section">
+        <div class="container">
+            <h1>Work Experience</h1>
+            <div class="timeline">
+                <!-- Work Experience 1 -->
+                <div class="timeline-item timeline-item-right">
+                    <div class="timeline-item-content">
+                        <img src="images/about/2.png" alt="Work Experience">
+                        <h3>Data Analyst Intern</h3>
+                        <h5>RevoU x Telkom</h5>
+                        <h5>Jul 2024 - Sep 2024</h5>
+                        <h6><i>RevoU in collaboration with Telkom Indonesia to provide intensive research for PADI UMKM (ecommerce for MSMEs)</i></h6>
+                        <p>Collected and integrated e-commerce data, ensuring quality and consistency for clustering analysis using Python and SQL.</p>
+                        <p>Conducted segmentation using K-means and Gaussian Mixture clustering, achieving 0.8 silhouette score and insightful customer segments that informed marketing strategies.</p>
+                        <p>Developed and presented interactive dashboards in Tableau and created recommendation systems using K-Nearest Neighbors item-based and KNN user-based collaborative filtering with similarity up to 80%.</p>
+                    </div>
+                </div>
+                <!-- Work Experience 2 -->
+                <div class="timeline-item timeline-item-left">
+                    <div class="timeline-item-content">
+                        <img src="images/about/2.png" alt="Work Experience">
+                        <h3>Site Supervisor</h3>
+                        <h5>PT. Borobudur Bangun jaya</h5>
+                        <h5>Feb 2017 - May 2017 </h5>
+                        <p>Managed over 30 construction projects, employed analytical methods to optimize processes and reduce project completion times by 15%.</p>
+                        <p>Conducted in-depth financial analyses to identify cost-saving opportunities, resulted in a 30% cost-reduction in project expenses over two years.</p>
+                        <p>Achieved a 95% client satisfaction rate by leveraging strong project management skills and adaptability. Implemented effective change management processes, increasing repeat business and referrals by 70% through excellent client engagement.</p>
+                    </div>
+                </div>
+                 <!-- Work Experience 3 -->
+                 <div class="timeline-item timeline-item-right">
+                    <div class="timeline-item-content">
+                        <img src="images/about/pelindo.jpeg" alt="Work Experience">
+                        <h3>IT Support Engineer Intern</h3>
+                        <h5>PT. Pelabuhan Indonesia (Pelindo) 1</h5>
+                        <h5>Feb 2017 - May 2017 </h5>
+                        <h6><i>Pelindo is Indonesia's state-owned enterprises specializing in port and logistics services</i></h6>
+                        <p>Managed an average of 10 support tickets daily including troubleshooting software issues, network problems, and hardware malfunctions, achieving a 100% resolution rate on the first contact.</p>
+                        <p>Assisted in implementing cybersecurity measures, contributing to a 30% improvement in network security.</p>
+                        <p>Identified and resolved a recurrent network bottleneck issue, improving overall network performance by 20%. Utilized analytical skills to diagnose and address the root cause to implement a lasting solution.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Work Experience Section End -->
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h1>Contact Me</h1>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> andi_tama@outlook.com</p>
+                <p><i class="fas fa-phone"></i> (+62)82169648798</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/andi--pratama/"><img src="icons/1.png" alt="LinkedIn"></a>
+                <a href="https://github.com/andipraatamaa/"><img src="icons/git.png" alt="GitHub"></a>
+                <a href="mailto:andi_tama@outlook.com"><img src="icons/email.png" alt="Email"></a>
+                <a href="http://WA.me/6282169648798"><img src="icons/wa.png" alt="Whatsapp"></a>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section End -->
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
